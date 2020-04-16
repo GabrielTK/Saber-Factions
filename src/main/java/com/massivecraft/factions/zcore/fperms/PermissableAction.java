@@ -11,6 +11,7 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public enum PermissableAction {
 
@@ -111,8 +112,8 @@ public enum PermissableAction {
         List<String> lore = section.getStringList("placeholder-item.lore");
 
         lore = FactionsPlugin.getInstance().replacePlaceholders(lore,
-                new Placeholder("{action-access-color}", fme.getFaction().getPermissions().get(perm).get(this).getColor()),
-                new Placeholder("{action-access}", fme.getFaction().getPermissions().get(perm).get(this).getName()));
+                new Placeholder("{action-access-color}", Optional.ofNullable(fme.getFaction().getPermissions().get(perm)).map(i->i.get(this)).map(i->i.getColor()).orElse(FactionsPlugin.getInstance().getConfig().getString("fperm-gui.action.Access-Colors.Undefined"))),
+                new Placeholder("{action-access}", Optional.ofNullable(fme.getFaction().getPermissions().get(perm)).map(i->i.get(this)).map(i->i.getName()).orElse("Undefined")));
 
         meta.setLore(FactionsPlugin.getInstance().colorList(lore));
         item.setItemMeta(meta);
