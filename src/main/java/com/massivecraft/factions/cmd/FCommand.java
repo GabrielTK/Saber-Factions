@@ -123,7 +123,7 @@ public abstract class FCommand {
 
     public String getHelpShort() {
         if (this.helpShort == null) {
-            return getUsageTranslation().toString();
+            return getUsageTranslationString();
         }
 
         return this.helpShort;
@@ -133,7 +133,21 @@ public abstract class FCommand {
         this.helpShort = val;
     }
 
+    /***
+     * This method returns the string to be displayed at the Usage Information message, when the command implementation is part of the plugin itself.
+     *
+     * If you are writing an extension, set this as TL.EXTERNAL and override getUsageTranslationString()
+     * @return TL
+     */
     public abstract TL getUsageTranslation();
+    /***
+     * This method returns the string to be displayed at the Usage Information message.
+     * Override this to implement external commands.
+     * @return String
+     */
+    public String getUsageTranslationString() {
+        return getUsageTranslation().toString();
+    }
 
 
     /*

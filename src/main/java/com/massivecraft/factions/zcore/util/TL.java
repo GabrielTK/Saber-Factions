@@ -49,6 +49,8 @@ public enum TL {
     /**
      * Actions translations
      */
+
+    EXTERNAL("This string was to be provided by an extension. It was not. Please contact the author of the extension. Saber-Factions is not responsible for this error."),
     ACTIONS_NOPERMISSION("{faction} does not allow you to {action}"),
     ACTIONS_NOPERMISSIONPAIN("It is painful to try to {action} in the territory of {faction}"),
     ACTIONS_OWNEDTERRITORYDENY("You cant do that in this territory, it is owned by {owners}"),
