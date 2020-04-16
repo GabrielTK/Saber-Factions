@@ -500,6 +500,7 @@ fperm-gui:
       drain: BUCKET
       spawner: MOB_SPAWNER
       home: ENDER_EYE
+      editinfo: WRITABLE_BOOK
     slots:
       # Uses same format as above to inform the player of clicked relation
       relation: 4
@@ -535,6 +536,7 @@ fperm-gui:
       spawner: 38
       drain: 49
       home: 48
+      editinfo: 5
     # {action} Action name eg: Setwarp, Kick
     # {action-access} Access name eg: Allow, Deny
     # {action-access-color} Access color eg: Allow;GREEN

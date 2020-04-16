@@ -155,7 +155,9 @@ public enum Permission {
     SHOWCLAIMS("showclaims"),
     WARP("warp"),
     WILD("wild"),
-    CHEST("chest");
+    CHEST("chest"),
+
+    EDIT_INFO("editinfo");
 
     public final String node;
 

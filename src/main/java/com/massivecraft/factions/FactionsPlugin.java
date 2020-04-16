@@ -295,7 +295,8 @@ public class FactionsPlugin extends MPlugin {
                 new MissionHandler(this),
                 new FChestListener(),
                 new MenuListener(),
-                new AntiChestListener()
+                new AntiChestListener(),
+                new BookEditListener()
         };
 
         for (Listener eventListener : eventsListener)

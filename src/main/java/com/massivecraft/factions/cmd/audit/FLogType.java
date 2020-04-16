@@ -21,8 +21,8 @@ public enum FLogType {
     ROLE_PERM_EDIT("Promotional Edits", "&e%s&7&e %s &e%s &7to &e%s", 4),
     SPAWNER_EDIT("Spawner Edits", "&e%s&7 %s &e%s&7 %s", 4),
     RANK_EDIT("Rank Edits", "&e%s&7 set &e%s&7 to %s", 3),
-    F_TNT("Tnt Edits", "&e%s&7 %s &e%s", 3);
-
+    F_TNT("Tnt Edits", "&e%s&7 %s &e%s", 3),
+    FINFO_EDIT("Book Edits", "&e%s&7 changed.", 0);
     private String displayName;
     private String msg;
     private int requiredArgs;

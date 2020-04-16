@@ -22,6 +22,9 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 public interface Faction extends EconomyParticipator {
+    List<String> getFactionBookPages();
+
+    void setFactionBookPages(List<String> list);
 
     String getMemberRoleId();
 

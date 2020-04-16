@@ -95,6 +95,7 @@ public abstract class MemoryFaction implements Faction, EconomyParticipator {
     private String weeWooFormat;
     private String guildId;
     private String memberRoleId;
+    private List<String> bookPages;
 
 
     // -------------------------------------------- //
@@ -111,6 +112,7 @@ public abstract class MemoryFaction implements Faction, EconomyParticipator {
         this.lastPlayerLoggedOffTime = 0;
         this.peaceful = false;
         this.peacefulExplosionsEnabled = false;
+        this.bookPages = Collections.emptyList();
         this.permanent = false;
         this.money = 0.0;
         this.powerBoost = 0.0;
@@ -144,6 +146,7 @@ public abstract class MemoryFaction implements Faction, EconomyParticipator {
         peaceful = old.peaceful;
         permanentPower = old.permanentPower;
         home = old.home;
+        bookPages = old.bookPages;
         lastPlayerLoggedOffTime = old.lastPlayerLoggedOffTime;
         money = old.money;
         powerBoost = old.powerBoost;
@@ -1439,5 +1442,13 @@ public abstract class MemoryFaction implements Faction, EconomyParticipator {
 
     public Set<FLocation> getAllClaims() {
         return Board.getInstance().getAllClaims(this);
+    }
+
+    public List<String> getFactionBookPages(){
+        return this.bookPages;
+    }
+
+    public void setFactionBookPages(List<String> list){
+        this.bookPages = list;
     }
 }

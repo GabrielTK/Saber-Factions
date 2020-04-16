@@ -70,6 +70,7 @@ public enum TL {
     /**
      * Messsges for /f help
      */
+    COMMAND_HELP_INFO("Opens the Faction InfoBook. Use any arg to edit."),
     COMMAND_HELP_NEXTCREATE("Learn how to create a faction on the next page."),
     COMMAND_HELP_INVITATIONS("command.help.invitations", "You might want to close it and use invitations:"),
     COMMAND_HELP_HOME("And don't forget to set your home:"),

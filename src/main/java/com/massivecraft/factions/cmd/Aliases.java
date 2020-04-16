@@ -11,6 +11,7 @@ public class Aliases {
      * @author DroppingAnvil
      */
 
+    public static ArrayList<String> info = new ArrayList<>(Arrays.asList("book", "infobook", "info"));
     public static ArrayList<String> friendlyFire = new ArrayList<>(Arrays.asList("friendlyfire", "ff"));
     public static ArrayList<String> notifications = new ArrayList<>(Arrays.asList("notifications", "notis"));
     public static ArrayList<String> alts_alts = new ArrayList<>(Arrays.asList("alts", "alt"));

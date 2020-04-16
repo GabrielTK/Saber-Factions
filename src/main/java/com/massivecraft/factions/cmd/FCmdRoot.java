@@ -89,6 +89,7 @@ public class FCmdRoot extends FCommand implements CommandExecutor {
     public CmdSethome cmdSethome = new CmdSethome();
     public CmdShow cmdShow = new CmdShow();
     public CmdStatus cmdStatus = new CmdStatus();
+    public CmdInfo cmdInfo = new CmdInfo();
     public CmdStealth cmdStealth = new CmdStealth();
     public CmdStuck cmdStuck = new CmdStuck();
     public CmdTag cmdTag = new CmdTag();
@@ -203,7 +204,7 @@ public class FCmdRoot extends FCommand implements CommandExecutor {
         this.helpLong.add(FactionsPlugin.getInstance().txt.parseTags("<i>This command contains all faction stuff."));
 
         if (CommodoreProvider.isSupported()) brigadierManager = new BrigadierManager();
-
+        this.addSubCommand(this.cmdInfo);
         this.addSubCommand(this.cmdAdmin);
         this.addSubCommand(this.cmdAutoClaim);
         this.addSubCommand(this.cmdBoom);
